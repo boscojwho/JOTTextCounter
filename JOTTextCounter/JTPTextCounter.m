@@ -145,9 +145,9 @@ typedef void (^JTPStringMetadataCompletionHandler)(NSUInteger count);
  Performs count within a dispatch group, and waits for all counts to finish before posting update notification.
  @discussion For example, if word count finishes, but paragraph count is still completing, the dispatch group in this method will wait until paragraph count finishes before posting an update notification.
  */
-- (void)_performCountWithText:(NSString*)text forceCount:(BOOL)flag
+- (void)_performCountWithText:(NSString*)text forceCount:(BOOL)shouldForceCount
 {
-    if (!self.shouldAllowCount) {
+    if (!self.shouldAllowCount && !shouldForceCount) {
         return;
     }
     
