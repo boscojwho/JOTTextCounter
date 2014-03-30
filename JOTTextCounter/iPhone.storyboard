@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5053" systemVersion="13C64" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="5Ad-Rt-VDX">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+    </dependencies>
+    <scenes>
+        <!--Text View Controller - JOTTextCounter-->
+        <scene sceneID="VIX-92-VZy">
+            <objects>
+                <viewController id="7YX-zi-ylj" customClass="JOTTextViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="9Er-r1-V44"/>
+                        <viewControllerLayoutGuide type="bottom" id="anu-wd-2jh"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="SYU-dt-iGs">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oHr-Iu-Fgj">
+                                <rect key="frame" x="0.0" y="20" width="320" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="fFt-NY-pSG"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4wN-Gm-BPQ">
+                                <rect key="frame" x="0.0" y="49" width="320" height="455"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <mutableString key="text">Soaking Up the Sake
+ 
+Now that sushi is sold in supermarkets and ramen has come to food courts, what next?
+
+Easy: izakayas. These informal Japanese restaurants have been opening at a rapid pace around the country, but most Americans haven’t figured them out yet. Where’s the sushi bar? What’s with the tiny portions? Is this Asian fusion tapas or what?
+ 
+That’s the izakaya: easy to love, but hard to nail down. It’s friendlier than a French bar à vins, has more food choices than a Spanish tapeo, and takes itself less seriously than a British gastro pub.
+
+But it makes the same point: drinking is primary; food is secondary; and if you’re doing it right, there will be hangovers.
+ 
+“Hangover prevention is a big topic of conversation at izakaya meals,” said Yukari Sakamoto, a Japanese-American sommelier and writer who lives in Tokyo. (She swears by a morning-after remedy called Ukon no Chikara.) “That is, when you’re not talking about what to eat next.”
+
+From the words for sake (rice wine) and stay, traditional izakayas are places anyone can linger for the price of a drink. The word is usually translated as tavern or pub — not very helpfully, since those words suggest a menu more T.G.I. Friday’s than Nobu. 
+ 
+An izakaya isn’t a destination for great ramen, or perfect tempura, or impeccable sushi — although the menu, confusingly, will list all those dishes and more. Izakaya food, like most bar food, is salty and spicy, crunchy and savory, and engineered to be especially delicious with beer or wine.
+ 
+But our phrase “bar food” can’t cover the dizzying spread of house-made tofu and pickles, grilled seafood, deep-fried bites like octopus balls and chicken wings, home-style meat stews, fried rice, noodle bowls and local seasonal produce that characterize even modest izakayas in Japan.
+
+At their best, izakaya meals can also be models of Japanese culinary poise and delicacy. “It’s supposed to be a kind of casual place to eat and drink,” said Eric Bromberg, the chef and restaurateur who opened Blue Ribbon Izakaya and Sushi on the Lower East Side last year. “But since it’s Japan, everything comes out beautiful and elegant anyway.”
+ 
+In this country, izakaya tradition is alive and well at places like Yopparai, Ten and Bozu in New York City, Roku, Chotto and Yuzuki in San Francisco and Raku in Las Vegas. At Sakamai on the Lower East Side of Manhattan, Toranoko in Los Angeles, Miso in Atlanta and Kushi in Washington, Japanese-trained chefs are reinterpreting the tradition.
+ 
+And a few chefs who don’t normally cook Japanese food at all have gone into izakaya mode, happy to discover a corner of that nation’s gastronomy that is relatively loose and open to interpretation by outsiders.
+ 
+The result is a new intersection of the Japanese canon and American bar food, in dishes like the chef David Myers’s baked potato at Hinoki and the Bird in Los Angeles, a roasted sweet potato topped with crème fraîche spiked with pickled plum, chopped red chilies, chives and bacon. Mr. Bromberg’s creamy horseradish-cucumber salad, like his mirin-spiked chopped liver served with an entire loaf of challah toast, has a playful Japanese-Jewish quality. And at Chez Sardine in Greenwich Village, the maple-miso salmon head for two skillfully evokes both the chef Mehdi Brunet-Benkrikly’s Canadian roots and the classic fatty, smoky izakaya dish of buri kama, grilled yellowtail collar.
+ 
+“I would be paralyzed by the idea of opening a sushi bar,” said Gabe Stulman, the restaurant’s Wisconsin-bred owner. “But an izakaya was easy for me to wrap my head around.”
+
+In Japan, where the custom goes back at least to the 19th century, izakayas — marked by glowing red lanterns and long sake lists — are where co-workers go to celebrate a promotion, where young people meet to fill up before clubbing or karaoke, where families gather for an inexpensive weekend treat. There are upscale and hole-in-the-wall izakayas, kawaii izakayas where the waitresses are dressed as little girls, and chains of kechi yasui izakayas. Among young people, sake consumption has been steadily declining in Japan as stronger drinks become popular, and chain izakayas are among the efforts by the sake industry to bring them back.
+ 
+“In Japanese life, there is a lot of drinking, but it is always combined with eating,” said Ms. Sakamoto, who was raised in Minnesota and attended culinary school in New York City, and was a sommelier at the Park Hyatt in Tokyo. “Which is why we have more izakayas than bars.”
+ 
+Many eating places in Japan are small, dedicated to just one dish (grilled chicken or tempura, not both) and organized to get you in and out as quickly as possible. Many others are the opposite: hushed, slow-paced and exclusive ryotei; or rooms dedicated to kaiseki, the stately procession of bites that accompanies a tea ceremony. </mutableString>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <connections>
+                                    <outlet property="delegate" destination="7YX-zi-ylj" id="T3T-dX-ljQ"/>
+                                </connections>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="oHr-Iu-Fgj" firstAttribute="leading" secondItem="SYU-dt-iGs" secondAttribute="leading" id="3YE-zV-cBE"/>
+                            <constraint firstItem="oHr-Iu-Fgj" firstAttribute="top" secondItem="SYU-dt-iGs" secondAttribute="top" constant="20" symbolic="YES" id="4XZ-1k-EdL"/>
+                            <constraint firstItem="4wN-Gm-BPQ" firstAttribute="top" secondItem="oHr-Iu-Fgj" secondAttribute="bottom" constant="8" symbolic="YES" id="LWH-BN-Xv4"/>
+                            <constraint firstAttribute="trailing" secondItem="oHr-Iu-Fgj" secondAttribute="trailing" id="d0N-mq-xrd"/>
+                            <constraint firstItem="4wN-Gm-BPQ" firstAttribute="leading" secondItem="oHr-Iu-Fgj" secondAttribute="leading" id="f0W-Hd-utB"/>
+                            <constraint firstItem="oHr-Iu-Fgj" firstAttribute="trailing" secondItem="4wN-Gm-BPQ" secondAttribute="trailing" id="nyp-bt-97g"/>
+                            <constraint firstAttribute="bottom" secondItem="4wN-Gm-BPQ" secondAttribute="bottom" id="r3T-b7-iJb"/>
+                        </constraints>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <navigationItem key="navigationItem" title="JOTTextCounter" id="Ftz-ud-p4Z">
+                        <barButtonItem key="rightBarButtonItem" title="Keyboard" id="L14-ya-6Wz">
+                            <connections>
+                                <action selector="navigationBarRightBarButtonItemDidPress:" destination="7YX-zi-ylj" id="bn3-cz-Ce1"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="textCounterLabel" destination="oHr-Iu-Fgj" id="5hK-cO-yhu"/>
+                        <outlet property="textView" destination="4wN-Gm-BPQ" id="QNL-w2-zru"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3Yk-Hl-1Ob" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1579" y="152"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="7Ng-qa-d8h">
+            <objects>
+                <navigationController id="5Ad-Rt-VDX" sceneMemberID="viewController">
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="8P6-tn-qND">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="7YX-zi-ylj" kind="relationship" relationship="rootViewController" id="7rZ-0J-gcm"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mAS-B8-zi6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1053" y="152"/>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
