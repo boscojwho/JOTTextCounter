@@ -6,7 +6,7 @@ This is an open-source version of a text counter used in 'Jot – Refined Text E
 
 Installation
 ==============
-Add all source files in 'Source' folder (JOTTextCounter.h,m)
+Add JOTTextCounter.h,m to your project.
 [CocoaPods currently not available]
 
 Example
