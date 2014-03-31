@@ -16,13 +16,13 @@ See Demo App to see JOTTextCounter in action, and how to set it up in code.
 Setup
 ==============
 Note: Please use the designated initializer.
-1. Setup your UITextView's NSTextStorageDelegate class.
+1 Setup your UITextView's NSTextStorageDelegate class.
 
-2. Call -startCountingWithText: when you initially load a text document to establish initial count values.
+2 Call -startCountingWithText: when you initially load a text document to establish initial count values.
 
-3. Forward calls on - (void)textStorage:(NSTextStorage *)textStorage didProcessEditing:(NSTextStorageEditActions)editedMask range:(NSRange)editedRange changeInLength:(NSInteger)delta to JOTTextCounter (JOTTextCounter relies on this to automatically count text in the background when changes are made).
+3 Forward calls on - (void)textStorage:(NSTextStorage *)textStorage didProcessEditing:(NSTextStorageEditActions)editedMask range:(NSRange)editedRange changeInLength:(NSInteger)delta to JOTTextCounter (JOTTextCounter relies on this to automatically count text in the background when changes are made).
 
-4. Call -endCounting when you want to end/pause counting. 
+4 Call -endCounting when you want to end/pause counting. 
 
 See header file for detailed documentation.
 
