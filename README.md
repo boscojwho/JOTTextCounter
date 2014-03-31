@@ -1,6 +1,6 @@
 JOTTextCounter
 ==============
-JOTTextCounter is an NSString-based text counter designed for use with UITextView/NSTextStorage on iOS.
+JOTTextCounter is an NSString-based text counter designed for use with UITextView/NSTextStorage on iOS that lets you count composed characters, words, lines, sentences, and paragraphs in an NSString.
 
 This is an open-source version of a text counter used in 'Jot – Refined Text Editor' for iPhone, iPod touch (www.jot-app.com, @jot_app).
 
