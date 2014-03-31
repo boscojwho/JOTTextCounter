@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A40EB6A618E9178800A8C91C /* JTPTextCounter.m in Sources */ = {isa = PBXBuildFile; fileRef = A40EB6A518E9178800A8C91C /* JTPTextCounter.m */; };
 		A441E8EF18E65E4B00C46DFA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A441E8EE18E65E4B00C46DFA /* Foundation.framework */; };
 		A441E8F118E65E4B00C46DFA /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A441E8F018E65E4B00C46DFA /* CoreGraphics.framework */; };
 		A441E8F318E65E4B00C46DFA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A441E8F218E65E4B00C46DFA /* UIKit.framework */; };
@@ -19,7 +20,6 @@
 		A441E90A18E65E4B00C46DFA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A441E8F218E65E4B00C46DFA /* UIKit.framework */; };
 		A441E91218E65E4B00C46DFA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A441E91018E65E4B00C46DFA /* InfoPlist.strings */; };
 		A441E91418E65E4B00C46DFA /* JOTTextCounterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A441E91318E65E4B00C46DFA /* JOTTextCounterTests.m */; };
-		A441E91F18E65E5E00C46DFA /* JTPTextCounter.m in Sources */ = {isa = PBXBuildFile; fileRef = A441E91E18E65E5E00C46DFA /* JTPTextCounter.m */; };
 		A441E92518E6636B00C46DFA /* iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A441E92418E6636B00C46DFA /* iPhone.storyboard */; };
 		A441E92818E663F000C46DFA /* JOTTextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A441E92718E663F000C46DFA /* JOTTextViewController.m */; };
 /* End PBXBuildFile section */
@@ -35,6 +35,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A40EB6A418E9178800A8C91C /* JTPTextCounter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JTPTextCounter.h; sourceTree = "<group>"; };
+		A40EB6A518E9178800A8C91C /* JTPTextCounter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JTPTextCounter.m; sourceTree = "<group>"; };
 		A441E8EB18E65E4B00C46DFA /* JOTTextCounter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JOTTextCounter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A441E8EE18E65E4B00C46DFA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		A441E8F018E65E4B00C46DFA /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -51,8 +53,6 @@
 		A441E90F18E65E4B00C46DFA /* JOTTextCounterTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "JOTTextCounterTests-Info.plist"; sourceTree = "<group>"; };
 		A441E91118E65E4B00C46DFA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		A441E91318E65E4B00C46DFA /* JOTTextCounterTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JOTTextCounterTests.m; sourceTree = "<group>"; };
-		A441E91D18E65E5E00C46DFA /* JTPTextCounter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JTPTextCounter.h; sourceTree = "<group>"; };
-		A441E91E18E65E5E00C46DFA /* JTPTextCounter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JTPTextCounter.m; sourceTree = "<group>"; };
 		A441E92418E6636B00C46DFA /* iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = iPhone.storyboard; sourceTree = "<group>"; };
 		A441E92618E663F000C46DFA /* JOTTextViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JOTTextViewController.h; sourceTree = "<group>"; };
 		A441E92718E663F000C46DFA /* JOTTextViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JOTTextViewController.m; sourceTree = "<group>"; };
@@ -155,8 +155,8 @@
 		A441E92018E6634200C46DFA /* JOTTextCounter */ = {
 			isa = PBXGroup;
 			children = (
-				A441E91D18E65E5E00C46DFA /* JTPTextCounter.h */,
-				A441E91E18E65E5E00C46DFA /* JTPTextCounter.m */,
+				A40EB6A418E9178800A8C91C /* JTPTextCounter.h */,
+				A40EB6A518E9178800A8C91C /* JTPTextCounter.m */,
 			);
 			name = JOTTextCounter;
 			sourceTree = "<group>";
@@ -271,8 +271,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				A441E8FF18E65E4B00C46DFA /* JOTAppDelegate.m in Sources */,
-				A441E91F18E65E5E00C46DFA /* JTPTextCounter.m in Sources */,
 				A441E8FB18E65E4B00C46DFA /* main.m in Sources */,
+				A40EB6A618E9178800A8C91C /* JTPTextCounter.m in Sources */,
 				A441E92818E663F000C46DFA /* JOTTextViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -472,6 +472,7 @@
 				A441E91918E65E4B00C46DFA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A441E91A18E65E4B00C46DFA /* Build configuration list for PBXNativeTarget "JOTTextCounterTests" */ = {
 			isa = XCConfigurationList;
@@ -480,6 +481,7 @@
 				A441E91C18E65E4B00C46DFA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
