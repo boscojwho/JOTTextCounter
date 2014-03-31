@@ -7,11 +7,11 @@
 //
 
 #import "JOTTextViewController.h"
-#import "JTPTextCounter.h"
+#import "JOTTextCounter.h"
 
 @interface JOTTextViewController ()
 
-@property (nonatomic, strong) JTPTextCounter* textCounter;
+@property (nonatomic, strong) JOTTextCounter* textCounter;
 @property (weak, nonatomic) IBOutlet UILabel *textCounterLabel;
 
 @end
@@ -142,9 +142,9 @@ static inline UIViewAnimationOptions animationOptionsWithCurve(UIViewAnimationCu
 }
 
 #pragma mark - JTPTextCounter
-- (JTPTextCounter *)textCounter {
+- (JOTTextCounter *)textCounter {
     if (!_textCounter) {
-        _textCounter = [[JTPTextCounter alloc] init];
+        _textCounter = [[JOTTextCounter alloc] init];
     }
     return _textCounter;
 }
