@@ -37,5 +37,5 @@ Options
 - JOTTextCounter lets clients choose what text granularity to count (composed characters, words, lines, sentences, paragraphs). Simply set the bitmask JOTTextCounterOptions textCountingOptions.
 
 Notifications
-- Notifications are posted after counting finishes for all text counting options.
+- JOTTextCounter will post a notification for each request once all text counting options return a count value.
 - Use the user info key constants defined in JOTTextCounter.h to access count values (these values are also accessible via public properties).
