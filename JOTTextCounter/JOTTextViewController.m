@@ -67,7 +67,7 @@
 #pragma mark - NSNotification
 - (void)_registerForTextCounterNotifications
 {
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(_receiveTextCounterNotification:) name:JTPTextCounterDidUpdateCountNotification object:self.textCounter];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(_receiveTextCounterNotification:) name:JOTTextCounterDidUpdateCountNotification object:self.textCounter];
 }
 
 - (void)_registerForKeyboardNotifications
@@ -78,7 +78,7 @@
 
 - (void)_receiveTextCounterNotification:(NSNotification*)aTextCounterNotification
 {
-    if ([aTextCounterNotification.name isEqualToString:JTPTextCounterDidUpdateCountNotification])
+    if ([aTextCounterNotification.name isEqualToString:JOTTextCounterDidUpdateCountNotification])
     {
         [self _textCounterDidUpdateCountWithUserInfo:aTextCounterNotification.userInfo];
     }
@@ -151,11 +151,11 @@ static inline UIViewAnimationOptions animationOptionsWithCurve(UIViewAnimationCu
 
 - (void)_textCounterDidUpdateCountWithUserInfo:(NSDictionary*)userInfo
 {
-    NSInteger composedCharacterCount = [userInfo[JTPTextCounterComposedCharacterSequencesCountKey] integerValue];
-    NSInteger wordCount = [userInfo[JTPTextCounterWordCountKey] integerValue];
-    NSInteger lineCount = [userInfo[JTPTextCounterLineCountKey] integerValue];
-    NSInteger sentenceCount = [userInfo[JTPTextCounterSentenceCountKey] integerValue];
-    NSInteger paragraphCount = [userInfo[JTPTextCounterParagraphCountKey] integerValue];
+    NSInteger composedCharacterCount = [userInfo[JOTTextCounterComposedCharacterSequencesCountKey] integerValue];
+    NSInteger wordCount = [userInfo[JOTTextCounterWordCountKey] integerValue];
+    NSInteger lineCount = [userInfo[JOTTextCounterLineCountKey] integerValue];
+    NSInteger sentenceCount = [userInfo[JOTTextCounterSentenceCountKey] integerValue];
+    NSInteger paragraphCount = [userInfo[JOTTextCounterParagraphCountKey] integerValue];
     
     NSString* textCounterLabelText = [NSString stringWithFormat:@"C:%ld W:%ld L:%ld S:%ld P:%ld", (long)composedCharacterCount, (long)wordCount, (long)lineCount, (long)sentenceCount, (long)paragraphCount];
     

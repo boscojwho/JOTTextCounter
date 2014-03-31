@@ -1,14 +1,14 @@
 #import <Foundation/Foundation.h>
 
 #pragma mark - NSNotification (Name)
-FOUNDATION_EXPORT NSString* const JTPTextCounterDidUpdateCountNotification; // Posted whenever text counter completes counting using client-defined text counting options.
+FOUNDATION_EXPORT NSString* const JOTTextCounterDidUpdateCountNotification; // Posted whenever text counter completes counting using client-defined text counting options.
 
 #pragma mark - NSNotification (User Info)
-FOUNDATION_EXPORT NSString* const JTPTextCounterComposedCharacterSequencesCountKey; // NSUInteger wrapped in NSNumber.
-FOUNDATION_EXPORT NSString* const JTPTextCounterWordCountKey; // NSUInteger wrapped in NSNumber.
-FOUNDATION_EXPORT NSString* const JTPTextCounterLineCountKey; // NSUInteger wrapped in NSNumber.
-FOUNDATION_EXPORT NSString* const JTPTextCounterSentenceCountKey; // NSUInteger wrapped in NSNumber.
-FOUNDATION_EXPORT NSString* const JTPTextCounterParagraphCountKey; // NSUInteger wrapped in NSNumber.
+FOUNDATION_EXPORT NSString* const JOTTextCounterComposedCharacterSequencesCountKey; // NSUInteger wrapped in NSNumber.
+FOUNDATION_EXPORT NSString* const JOTTextCounterWordCountKey; // NSUInteger wrapped in NSNumber.
+FOUNDATION_EXPORT NSString* const JOTTextCounterLineCountKey; // NSUInteger wrapped in NSNumber.
+FOUNDATION_EXPORT NSString* const JOTTextCounterSentenceCountKey; // NSUInteger wrapped in NSNumber.
+FOUNDATION_EXPORT NSString* const JOTTextCounterParagraphCountKey; // NSUInteger wrapped in NSNumber.
 
 typedef NS_OPTIONS(NSUInteger, JOTTextCounterOptions)
 {

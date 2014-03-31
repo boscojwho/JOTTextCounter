@@ -1,20 +1,20 @@
 #import "JOTTextCounter.h"
 
 #pragma mark - NSNotification (Name)
-NSString* const JTPTextCounterDidUpdateCountNotification = @"JTPTextCounterDidUpdateCountNotification";
+NSString* const JOTTextCounterDidUpdateCountNotification = @"JOTTextCounterDidUpdateCountNotification";
 
 #pragma mark - NSNotification (User Info)
-NSString* const JTPTextCounterComposedCharacterSequencesCountKey = @"JTPTextCounterComposedCharacterSequencesCountKey";
-NSString* const JTPTextCounterWordCountKey = @"JTPTextCounterWordCountKey";
-NSString* const JTPTextCounterLineCountKey = @"JTPTextCounterLineCountKey";
-NSString* const JTPTextCounterSentenceCountKey = @"JTPTextCounterSentenceCountKey";
-NSString* const JTPTextCounterParagraphCountKey = @"JTPTextCounterParagraphCountKey";
+NSString* const JOTTextCounterComposedCharacterSequencesCountKey = @"JOTTextCounterComposedCharacterSequencesCountKey";
+NSString* const JOTTextCounterWordCountKey = @"JOTTextCounterWordCountKey";
+NSString* const JOTTextCounterLineCountKey = @"JOTTextCounterLineCountKey";
+NSString* const JOTTextCounterSentenceCountKey = @"JOTTextCounterSentenceCountKey";
+NSString* const JOTTextCounterParagraphCountKey = @"JOTTextCounterParagraphCountKey";
 
 #pragma mark - PRIVATE KEYS
-static NSString* const JTPTextCounterTextViewKey = @"PRIVATE_JTPTextCounterTextViewKey";
-static NSString* const JTPTextCounterTextStorageKey = @"PRIVATE_JTPTextCounterTextStorageKey";
+static NSString* const JOTTextCounterTextViewKey = @"PRIVATE_JOTTextCounterTextViewKey";
+static NSString* const JOTTextCounterTextStorageKey = @"PRIVATE_JOTTextCounterTextStorageKey";
 
-typedef void (^JTPStringMetadataCompletionHandler)(NSUInteger count);
+typedef void (^JOTStringMetadataCompletionHandler)(NSUInteger count);
 
 @interface JOTTextCounter ()
 
@@ -103,7 +103,7 @@ typedef void (^JTPStringMetadataCompletionHandler)(NSUInteger count);
             // If we keep rescheduling timer, there's a chance that delayCountTimer may never fire.
             // Plus, it's a bit of a waste of CPU time to needlessly reschedule.
             if (!self.delayCountTimer.isValid) {
-                self.delayCountTimer = [NSTimer scheduledTimerWithTimeInterval:3.0 target:self selector:@selector(_handleDelayCountTimer:) userInfo:@{JTPTextCounterTextStorageKey: textStorage} repeats:NO];
+                self.delayCountTimer = [NSTimer scheduledTimerWithTimeInterval:3.0 target:self selector:@selector(_handleDelayCountTimer:) userInfo:@{JOTTextCounterTextStorageKey: textStorage} repeats:NO];
             }
             // Else, let currently valid delayCountTimer handle counting.
             else {
@@ -126,8 +126,8 @@ typedef void (^JTPStringMetadataCompletionHandler)(NSUInteger count);
 #pragma mark - Timer
 - (void)_handleDelayCountTimer:(NSTimer*)aTimer
 {
-    UITextView* textView = aTimer.userInfo[JTPTextCounterTextViewKey];
-    NSTextStorage* textStorage = aTimer.userInfo[JTPTextCounterTextStorageKey];
+    UITextView* textView = aTimer.userInfo[JOTTextCounterTextViewKey];
+    NSTextStorage* textStorage = aTimer.userInfo[JOTTextCounterTextStorageKey];
     if (textStorage)
     {
         NSString* text = [[NSString alloc] initWithString:textStorage.string];
@@ -223,7 +223,7 @@ typedef void (^JTPStringMetadataCompletionHandler)(NSUInteger count);
 /**
  Performs a count with an enumeration block that only increments count, and does not test substrings for additional accuracy inside enumeration block.
  */
-- (void)_vanillaCountForString:(NSString*)string withOptions:(NSStringEnumerationOptions)options completion:(JTPStringMetadataCompletionHandler)completion
+- (void)_vanillaCountForString:(NSString*)string withOptions:(NSStringEnumerationOptions)options completion:(JOTStringMetadataCompletionHandler)completion
 {
     __block NSUInteger count = 0;
     dispatch_async(self.textCounterConcurrentQueue, ^{
@@ -236,22 +236,22 @@ typedef void (^JTPStringMetadataCompletionHandler)(NSUInteger count);
     });
 }
 
-- (void)_composedCharacterCountForString:(NSString*)string withOptions:(NSStringEnumerationOptions)options completion:(JTPStringMetadataCompletionHandler)completion
+- (void)_composedCharacterCountForString:(NSString*)string withOptions:(NSStringEnumerationOptions)options completion:(JOTStringMetadataCompletionHandler)completion
 {
     [self _vanillaCountForString:string withOptions:options completion:completion];
 }
 
-- (void)_wordCountForString:(NSString*)string withOptions:(NSStringEnumerationOptions)options completion:(JTPStringMetadataCompletionHandler)completion
+- (void)_wordCountForString:(NSString*)string withOptions:(NSStringEnumerationOptions)options completion:(JOTStringMetadataCompletionHandler)completion
 {
     [self _vanillaCountForString:string withOptions:options completion:completion];
 }
 
-- (void)_lineCountForString:(NSString*)string withOptions:(NSStringEnumerationOptions)options completion:(JTPStringMetadataCompletionHandler)completion
+- (void)_lineCountForString:(NSString*)string withOptions:(NSStringEnumerationOptions)options completion:(JOTStringMetadataCompletionHandler)completion
 {
     [self _vanillaCountForString:string withOptions:options completion:completion];
 }
 
-- (void)_sentenceCountForString:(NSString*)string withOptions:(NSStringEnumerationOptions)options completion:(JTPStringMetadataCompletionHandler)completion
+- (void)_sentenceCountForString:(NSString*)string withOptions:(NSStringEnumerationOptions)options completion:(JOTStringMetadataCompletionHandler)completion
 {
     __block NSUInteger count = 0;
     dispatch_async(self.textCounterConcurrentQueue, ^{
@@ -267,7 +267,7 @@ typedef void (^JTPStringMetadataCompletionHandler)(NSUInteger count);
     });
 }
 
-- (void)_paragraphCountForString:(NSString*)string withOptions:(NSStringEnumerationOptions)options completion:(JTPStringMetadataCompletionHandler)completion
+- (void)_paragraphCountForString:(NSString*)string withOptions:(NSStringEnumerationOptions)options completion:(JOTStringMetadataCompletionHandler)completion
 {
     __block NSUInteger count = 0;
     dispatch_async(self.textCounterConcurrentQueue, ^{
@@ -286,12 +286,12 @@ typedef void (^JTPStringMetadataCompletionHandler)(NSUInteger count);
 #pragma mark - NSNotification
 - (void)_postUpdateNotification
 {
-    NSDictionary* userInfo = @{JTPTextCounterComposedCharacterSequencesCountKey: @(self.countOfComposedCharacterSequences),
-                               JTPTextCounterWordCountKey: @(self.countOfWords),
-                               JTPTextCounterLineCountKey: @(self.countOfLines),
-                               JTPTextCounterSentenceCountKey: @(self.countOfSentences),
-                               JTPTextCounterParagraphCountKey: @(self.countOfParagraphs)};
-    NSNotification* notification = [NSNotification notificationWithName:JTPTextCounterDidUpdateCountNotification object:self userInfo:userInfo];
+    NSDictionary* userInfo = @{JOTTextCounterComposedCharacterSequencesCountKey: @(self.countOfComposedCharacterSequences),
+                               JOTTextCounterWordCountKey: @(self.countOfWords),
+                               JOTTextCounterLineCountKey: @(self.countOfLines),
+                               JOTTextCounterSentenceCountKey: @(self.countOfSentences),
+                               JOTTextCounterParagraphCountKey: @(self.countOfParagraphs)};
+    NSNotification* notification = [NSNotification notificationWithName:JOTTextCounterDidUpdateCountNotification object:self userInfo:userInfo];
     
     dispatch_async(dispatch_get_main_queue(), ^{
         [[NSNotificationQueue defaultQueue] enqueueNotification:notification postingStyle:NSPostNow coalesceMask:NSNotificationCoalescingOnName|NSNotificationCoalescingOnSender forModes:@[[NSRunLoop mainRunLoop]]];
