@@ -22,7 +22,7 @@ Note: Please use the designated initializer.
 
 3. Forward calls on - (void)textStorage:(NSTextStorage *)textStorage didProcessEditing:(NSTextStorageEditActions)editedMask range:(NSRange)editedRange changeInLength:(NSInteger)delta to JOTTextCounter (JOTTextCounter relies on this to automatically count text in the background when changes are made).
 
-4. Call -endCounting when you want to end/pause counting.
+4. Call -endCounting when you want to end/pause counting. 
 
 See header file for detailed documentation.
 
