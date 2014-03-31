@@ -11,7 +11,7 @@ Add all source files in 'Source' folder (JOTTextCounter.h,m)
 
 Example
 ==============
-See Demo App to see JOTTextCounter in action, and how to set it up in code. 
+Download and run project to see JOTTextCounter in action, and how to set it up in code. 
 
 Setup
 ==============
