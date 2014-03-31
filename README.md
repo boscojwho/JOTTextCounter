@@ -16,6 +16,7 @@ See Demo App to see JOTTextCounter in action, and how to set it up in code.
 Setup
 ==============
 Note: Please use the designated initializer.
+
 1 Setup your UITextView's NSTextStorageDelegate class.
 
 2 Call -startCountingWithText: when you initially load a text document to establish initial count values.
