@@ -30,7 +30,7 @@ typedef NS_OPTIONS(NSUInteger, JOTTextCounterOptions)
  
  @warning NOTE: Currently, JTPTextCounter only supports NSString. Do not use with NSAttributedString, or subclasses thereof.
  */
-@interface JTPTextCounter : NSObject <UITextViewDelegate, NSTextStorageDelegate>
+@interface JOTTextCounter : NSObject <UITextViewDelegate, NSTextStorageDelegate>
 
 #pragma mark - Initializers
 /**

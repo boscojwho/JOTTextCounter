@@ -1,4 +1,4 @@
-#import "JTPTextCounter.h"
+#import "JOTTextCounter.h"
 
 #pragma mark - NSNotification (Name)
 NSString* const JTPTextCounterDidUpdateCountNotification = @"JTPTextCounterDidUpdateCountNotification";
@@ -16,7 +16,7 @@ static NSString* const JTPTextCounterTextStorageKey = @"PRIVATE_JTPTextCounterTe
 
 typedef void (^JTPStringMetadataCompletionHandler)(NSUInteger count);
 
-@interface JTPTextCounter ()
+@interface JOTTextCounter ()
 
 @property (nonatomic, strong) dispatch_group_t textCounterConcurrentGroup;
 @property (nonatomic, strong) dispatch_queue_t textCounterConcurrentQueue;
@@ -46,7 +46,7 @@ typedef void (^JTPStringMetadataCompletionHandler)(NSUInteger count);
 
 @end
 
-@implementation JTPTextCounter
+@implementation JOTTextCounter
 
 #pragma mark - Object Lifecycle
 - (instancetype)init
@@ -164,7 +164,7 @@ typedef void (^JTPStringMetadataCompletionHandler)(NSUInteger count);
         self.receivedCountRequestWhileCounterWasRunning = NO;
     });
     
-    __weak JTPTextCounter* weakSelf = self;
+    __weak JOTTextCounter* weakSelf = self;
     dispatch_async(self.textCounterConcurrentQueue, ^{
         
         if (self.textCountingOptions & JOTTextCounterOptionsCountComposedCharacterSequences)

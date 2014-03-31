@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A40EB6B218E91A4000A8C91C /* JTPTextCounter.m in Sources */ = {isa = PBXBuildFile; fileRef = A40EB6B118E91A4000A8C91C /* JTPTextCounter.m */; };
+		A40EB6B218E91A4000A8C91C /* JOTTextCounter.m in Sources */ = {isa = PBXBuildFile; fileRef = A40EB6B118E91A4000A8C91C /* JOTTextCounter.m */; };
 		A441E8EF18E65E4B00C46DFA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A441E8EE18E65E4B00C46DFA /* Foundation.framework */; };
 		A441E8F118E65E4B00C46DFA /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A441E8F018E65E4B00C46DFA /* CoreGraphics.framework */; };
 		A441E8F318E65E4B00C46DFA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A441E8F218E65E4B00C46DFA /* UIKit.framework */; };
@@ -35,8 +35,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		A40EB6B018E91A4000A8C91C /* JTPTextCounter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JTPTextCounter.h; sourceTree = "<group>"; };
-		A40EB6B118E91A4000A8C91C /* JTPTextCounter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JTPTextCounter.m; sourceTree = "<group>"; };
+		A40EB6B018E91A4000A8C91C /* JOTTextCounter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JOTTextCounter.h; sourceTree = "<group>"; };
+		A40EB6B118E91A4000A8C91C /* JOTTextCounter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JOTTextCounter.m; sourceTree = "<group>"; };
 		A441E8EB18E65E4B00C46DFA /* JOTTextCounter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JOTTextCounter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A441E8EE18E65E4B00C46DFA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		A441E8F018E65E4B00C46DFA /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -155,8 +155,8 @@
 		A441E92018E6634200C46DFA /* JOTTextCounter */ = {
 			isa = PBXGroup;
 			children = (
-				A40EB6B018E91A4000A8C91C /* JTPTextCounter.h */,
-				A40EB6B118E91A4000A8C91C /* JTPTextCounter.m */,
+				A40EB6B018E91A4000A8C91C /* JOTTextCounter.h */,
+				A40EB6B118E91A4000A8C91C /* JOTTextCounter.m */,
 			);
 			name = JOTTextCounter;
 			sourceTree = "<group>";
@@ -272,7 +272,7 @@
 			files = (
 				A441E8FF18E65E4B00C46DFA /* JOTAppDelegate.m in Sources */,
 				A441E8FB18E65E4B00C46DFA /* main.m in Sources */,
-				A40EB6B218E91A4000A8C91C /* JTPTextCounter.m in Sources */,
+				A40EB6B218E91A4000A8C91C /* JOTTextCounter.m in Sources */,
 				A441E92818E663F000C46DFA /* JOTTextViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
